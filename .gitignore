@@ -1,0 +1,53 @@
+# Secrets / credentials
+config/.env
+config/.env.*
+config/proxies.txt
+config/proxies.txt.*
+config/accounts.yaml
+config/accounts.yaml.*
+*.pem
+!config/csk_pubkey.pem
+
+# Runtime data
+data/session_*.json
+data/sess_swapbak-*
+data/registered_accounts.json
+data/account_proxy.json
+data/cf_cache.json
+data/tg_subscribers.json
+data/tg_bot_offset.json
+data/mobile_proxies.txt*
+data/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Backups
+*.bak
+*.bak-*
+*.bak_*
+*.swapbak-*
+*.catchbak-*
+*.durbak-*
+*.hammered.bak
