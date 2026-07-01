@@ -114,7 +114,7 @@ def main():
 
     if not jwt:
         LOG("NO JWT — operator not logged in. JWT-related keys: " + str(jwt_keys))
-        LOG("Operator: open VNC the noVNC console/vnc.html (password from deploy env) and login any account.")
+        LOG("Operator: open the noVNC console and log in any account (host and password from deploy env).")
         return 0                                 
 
     email = extract_login_user(ss)

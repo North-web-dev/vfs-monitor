@@ -1,5 +1,3 @@
-import os
-
 from __future__ import annotations
 import argparse, asyncio, base64, json, os, random, sys, time
 from pathlib import Path
@@ -25,7 +23,7 @@ LOGIN_PAGE = "https://visa.vfsglobal.com/uzb/en/lva/login"
 TURNSTILE_SITEKEY = "0x4AAAAAABhlz7Ei4byodYjs"
 
 TG_TOKEN = os.getenv("TG_TOKEN", "")
-TG_CHAT = "int(os.getenv("OWNER_CHAT_ID", "0"))"
+TG_CHAT = int(os.getenv("OWNER_CHAT_ID", "0"))
 
 CATEGORIES = {
     "LSHMEDCL":   "Work UZB/TKM",
@@ -49,12 +47,7 @@ def load_rsa_pubkey() -> bytes:
                                                    
     p = CONFIG_DIR / "csk_pubkey.pem"
     if not p.exists():
-                                                                       
-        legacy = Path("/root/atlix-audit/findings/rsa_pubkey.pem")
-        if legacy.exists():
-            p.write_bytes(legacy.read_bytes())
-        else:
-            raise FileNotFoundError(f"no pubkey at {p}")
+        raise FileNotFoundError(f"no pubkey at {p}")
     return p.read_bytes()
 
 def rsa_encrypt(pem_bytes: bytes, plaintext: str) -> str:

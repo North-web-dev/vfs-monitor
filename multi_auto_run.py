@@ -11,7 +11,7 @@ from auto_login import auto_login as do_login, cs_now, DATA, ROOT, LIFT_API
 from tg_notifier import broadcast                                                
 
 TG_TOKEN = os.getenv("TG_TOKEN", "")
-TG_CHAT = "int(os.getenv("OWNER_CHAT_ID", "0"))"
+TG_CHAT = int(os.getenv("OWNER_CHAT_ID", "0"))
 NODE = os.environ.get("NODE_NAME", "node")
 CONTROL_CAT = "LNGSTUD"                                                               
 POOL_STATE = DATA / f"pool_state_{NODE}.json"
