@@ -1,5 +1,8 @@
 # vfs-monitor
 
+[![CI](https://github.com/North-web-dev/vfs-monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/North-web-dev/vfs-monitor/actions/workflows/ci.yml) [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/North-web-dev/vfs-monitor?sort=semver)](https://github.com/North-web-dev/vfs-monitor/releases)
+
+
 Cluster-aware monitor for VFS Global appointment slots. It polls the
 `lift-api.vfsglobal.com/appointment/CheckIsSlotAvailable` endpoint on behalf of
 a pool of accounts and sends a Telegram alert when a date opens up.
